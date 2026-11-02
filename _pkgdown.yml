@@ -1,0 +1,57 @@
+url: https://pablosancheznunez.com/aitrail/
+
+template:
+  bootstrap: 5
+  bslib:
+    primary: "#1f5f5b"
+  opengraph:
+    image:
+      src: man/figures/card.png
+      alt: "aitrail: document, verify and disclose the use of AI in research"
+
+authors:
+  Pablo Sánchez-Núñez:
+    href: https://pablosancheznunez.com
+
+home:
+  links:
+  - text: Example report
+    href: https://pablosancheznunez.com/aitrail/example/report.html
+  - text: Example disclosure
+    href: https://pablosancheznunez.com/aitrail/example/disclosure.html
+  - text: JSON Schema
+    href: https://pablosancheznunez.com/aitrail/schema/ai-log.schema.json
+  - text: Author website
+    href: https://pablosancheznunez.com
+
+navbar:
+  structure:
+    left: [intro, reference, news]
+    right: [search, github]
+
+reference:
+- title: Set up
+  desc: Start a log in a project and see its vocabularies.
+  contents:
+  - ait_init
+  - ait_vocabulary
+  - ait_example
+- title: Record
+  desc: Tools, uses, interactions and human verification.
+  contents:
+  - ait_tool
+  - ait_register_use
+  - ait_log_interaction
+  - ait_verify
+  - ait_log
+- title: Check
+  desc: References and gaps in oversight.
+  contents:
+  - ait_check_references
+  - ait_audit
+  - ait_audit_rules
+- title: Disclose
+  desc: Statements for the manuscript and a report to share.
+  contents:
+  - ait_disclosure
+  - ait_report

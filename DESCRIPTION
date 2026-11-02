@@ -1,0 +1,38 @@
+Package: aitrail
+Title: Document, Verify and Disclose the Use of AI in Research
+Version: 0.1.0
+Authors@R:
+    person("Pablo", "Sánchez-Núñez", email = "psancheznunez@outlook.com",
+           role = c("aut", "cre", "cph"), comment = c(ORCID = "0000-0001-7845-9506"))
+Description: Keeps a structured, version-controlled record of how artificial
+    intelligence tools are used in each phase of a research project
+    (literature review, design, data collection and processing, analysis,
+    interpretation, writing, figures, peer review and communication): which
+    tools and model versions were used, for what, how much of their output
+    was kept, and how people verified it. From that record it audits gaps in
+    human oversight, checks that cited references exist and match their
+    metadata, and generates AI-use disclosure statements in English and
+    Spanish and a self-contained HTML report. Prompts are stored as hashes by
+    default to protect unpublished and personal data. The package does not
+    call any AI model and does not try to detect AI-generated text.
+License: MIT + file LICENSE
+URL: https://pablosancheznunez.com/aitrail/,
+    https://github.com/pablosancheznunez/aitrail
+BugReports: https://github.com/pablosancheznunez/aitrail/issues
+Depends:
+    R (>= 4.1.0)
+Imports:
+    jsonlite,
+    tools,
+    utils
+Suggests:
+    curl,
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
+Config/testthat/edition: 3
+Encoding: UTF-8
+Language: en-GB
+Roxygen: list(markdown = TRUE)
+Config/roxygen2/version: 8.1.1

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 278" width="240" height="278" role="img" aria-label="aitrail logo">
+  <polygon points="120,4 236,71 236,207 120,274 4,207 4,71" fill="#1f5f5b" stroke="#164744" stroke-width="6"/>
+  <rect x="58" y="58" width="96" height="124" rx="8" fill="#ffffff" opacity=".96"/>
+  <rect x="72" y="76" width="50" height="7" rx="3" fill="#1f5f5b"/>
+  <rect x="72" y="94" width="68" height="5" rx="2" fill="#b9d3d0"/>
+  <rect x="72" y="106" width="60" height="5" rx="2" fill="#b9d3d0"/>
+  <rect x="72" y="118" width="66" height="5" rx="2" fill="#b9d3d0"/>
+  <rect x="72" y="130" width="44" height="5" rx="2" fill="#b9d3d0"/>
+  <path d="M96 160 C 120 160, 128 140, 150 138 S 176 120, 178 100" fill="none" stroke="#f2b84b" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 11"/>
+  <circle cx="178" cy="94" r="17" fill="#f2b84b"/>
+  <path d="M170 94 l6 6 l11 -12" fill="none" stroke="#1f5f5b" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="120" y="226" text-anchor="middle" font-family="Georgia, serif" font-size="32" fill="#ffffff">aitrail</text>
+</svg>

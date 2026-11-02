@@ -1,0 +1,11 @@
+{
+  "id": "ver-ea86dfe71e",
+  "record": "verification",
+  "use": "use-90e63a862d",
+  "method": "rerun_analysis",
+  "outcome": "modified",
+  "verifier": "A. Researcher",
+  "notes": "Reran on the data; fixed the link function and the reference level",
+  "date": "2026-04-04",
+  "created": "2026-06-15T09:00:00Z"
+}

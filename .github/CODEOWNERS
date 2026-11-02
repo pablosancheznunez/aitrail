@@ -1,0 +1,6 @@
+# Paths whose changes need the maintainer's review.
+/R/audit.R @pablosancheznunez
+/R/references.R @pablosancheznunez
+/inst/extdata/ @pablosancheznunez
+/inst/schema/ @pablosancheznunez
+/.github/ @pablosancheznunez

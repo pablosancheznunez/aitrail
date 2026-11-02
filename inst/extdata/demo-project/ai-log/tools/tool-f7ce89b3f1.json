@@ -1,0 +1,12 @@
+{
+  "id": "tool-f7ce89b3f1",
+  "record": "tool",
+  "name": "Claude",
+  "provider": "Anthropic",
+  "model": "Claude Sonnet 4",
+  "version": null,
+  "access": "web",
+  "data_retention": null,
+  "notes": null,
+  "created": "2026-06-15T09:00:00Z"
+}

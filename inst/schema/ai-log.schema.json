@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pablosancheznunez.com/aitrail/schema/ai-log.schema.json",
+  "title": "aitrail AI-use log record",
+  "description": "One record of an aitrail AI-use log. Each record is stored as one JSON file in ai-log/<type>/<id>.json.",
+  "version": "0.1.0",
+  "oneOf": [
+    {"$ref": "#/$defs/tool"},
+    {"$ref": "#/$defs/use"},
+    {"$ref": "#/$defs/interaction"},
+    {"$ref": "#/$defs/verification"},
+    {"$ref": "#/$defs/reference_check"}
+  ],
+  "$defs": {
+    "nullableString": {"type": ["string", "null"]},
+    "date": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+    "created": {"type": "string", "format": "date-time"},
+    "tool": {
+      "type": "object",
+      "required": ["id", "record", "name", "provider", "access", "created"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^tool-[0-9a-f]{10}$"},
+        "record": {"const": "tool"},
+        "name": {"type": "string"},
+        "provider": {"type": "string"},
+        "model": {"$ref": "#/$defs/nullableString"},
+        "version": {"$ref": "#/$defs/nullableString"},
+        "access": {"enum": ["web", "api", "local", "integrated"]},
+        "data_retention": {"$ref": "#/$defs/nullableString"},
+        "notes": {"$ref": "#/$defs/nullableString"},
+        "created": {"$ref": "#/$defs/created"}
+      }
+    },
+    "use": {
+      "type": "object",
+      "required": ["id", "record", "phase", "task", "tool", "purpose", "output_used", "date", "created"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^use-[0-9a-f]{10}$"},
+        "record": {"const": "use"},
+        "phase": {"enum": ["literature_review", "conceptualisation", "study_design", "data_collection",
+                           "data_processing", "analysis", "interpretation", "writing",
+                           "translation_editing", "figures", "peer_review", "communication"]},
+        "task": {"type": "string"},
+        "tool": {"type": "string", "pattern": "^tool-[0-9a-f]{10}$"},
+        "purpose": {"type": "string"},
+        "output_used": {"enum": ["none", "partial", "substantial"]},
+        "person": {"$ref": "#/$defs/nullableString"},
+        "date": {"$ref": "#/$defs/date"},
+        "files": {"type": "array", "items": {"type": "string"}},
+        "risks": {"type": "array", "items": {"type": "string"}},
+        "notes": {"$ref": "#/$defs/nullableString"},
+        "created": {"$ref": "#/$defs/created"}
+      }
+    },
+    "interaction": {
+      "type": "object",
+      "required": ["id", "record", "use", "timestamp", "store", "created"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^int-[0-9a-f]{10}$"},
+        "record": {"const": "interaction"},
+        "use": {"type": "string", "pattern": "^use-[0-9a-f]{10}$"},
+        "timestamp": {"type": "string", "format": "date-time"},
+        "store": {"enum": ["hash", "excerpt", "full", "none"]},
+        "prompt": {"$ref": "#/$defs/nullableString"},
+        "prompt_md5": {"$ref": "#/$defs/nullableString"},
+        "response": {"$ref": "#/$defs/nullableString"},
+        "response_md5": {"$ref": "#/$defs/nullableString"},
+        "summary": {"$ref": "#/$defs/nullableString"},
+        "parameters": {"type": ["object", "null"]},
+        "created": {"$ref": "#/$defs/created"}
+      }
+    },
+    "verification": {
+      "type": "object",
+      "required": ["id", "record", "use", "method", "outcome", "verifier", "date", "created"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^ver-[0-9a-f]{10}$"},
+        "record": {"const": "verification"},
+        "use": {"type": "string", "pattern": "^use-[0-9a-f]{10}$"},
+        "method": {"enum": ["source_check", "rerun_analysis", "expert_review", "reference_check", "other"]},
+        "outcome": {"enum": ["accepted", "modified", "rejected"]},
+        "verifier": {"type": "string"},
+        "notes": {"$ref": "#/$defs/nullableString"},
+        "date": {"$ref": "#/$defs/date"},
+        "created": {"$ref": "#/$defs/created"}
+      }
+    },
+    "reference_check": {
+      "type": "object",
+      "required": ["id", "record", "date", "n", "results", "created"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^ref-[0-9a-f]{10}$"},
+        "record": {"const": "reference_check"},
+        "date": {"$ref": "#/$defs/date"},
+        "n": {"type": "integer", "minimum": 0},
+        "verified": {"type": "integer"},
+        "found": {"type": "integer"},
+        "mismatch": {"type": "integer"},
+        "not_found": {"type": "integer"},
+        "no_identifier": {"type": "integer"},
+        "unchecked": {"type": "integer"},
+        "results": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["ref", "status"],
+            "properties": {
+              "ref": {"type": "string"},
+              "doi": {"$ref": "#/$defs/nullableString"},
+              "status": {"enum": ["verified", "found", "mismatch", "not_found", "no_identifier", "unchecked"]},
+              "detail": {"$ref": "#/$defs/nullableString"}
+            }
+          }
+        },
+        "created": {"$ref": "#/$defs/created"}
+      }
+    }
+  }
+}

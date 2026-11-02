@@ -1,0 +1,14 @@
+{
+  "id": "int-4fa4092619",
+  "record": "interaction",
+  "use": "use-90e63a862d",
+  "timestamp": "2026-04-03T16:40:00Z",
+  "store": "excerpt",
+  "prompt": "Write R code to fit a cumulative link model of attitude (5 levels) on career stage and discipline, with random intercepts for institution.",
+  "prompt_md5": "2713ecea2294e2ce37ab2a80e0f74a8d",
+  "response": null,
+  "response_md5": null,
+  "summary": "Code using ordinal::clmm()",
+  "parameters": null,
+  "created": "2026-06-15T09:00:00Z"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "use-5870404f5b",
+  "record": "use",
+  "phase": "literature_review",
+  "task": "Suggest further studies on data-sharing attitudes",
+  "tool": "tool-dcd3ac62a7",
+  "purpose": "Find studies missed by the database search",
+  "output_used": "none",
+  "person": "A. Researcher",
+  "date": "2026-02-12",
+  "files": [],
+  "risks": [
+    "possible invented citations"
+  ],
+  "notes": null,
+  "created": "2026-06-15T09:00:00Z"
+}

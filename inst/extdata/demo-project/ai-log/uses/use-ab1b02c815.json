@@ -1,0 +1,15 @@
+{
+  "id": "use-ab1b02c815",
+  "record": "use",
+  "phase": "translation_editing",
+  "task": "Translate the abstract into Spanish",
+  "tool": "tool-34d8992acb",
+  "purpose": "Spanish abstract required by the journal",
+  "output_used": "substantial",
+  "person": "A. Researcher",
+  "date": "2026-06-01",
+  "files": [],
+  "risks": [],
+  "notes": null,
+  "created": "2026-06-15T09:00:00Z"
+}

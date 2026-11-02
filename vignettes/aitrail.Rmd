@@ -1,0 +1,129 @@
+---
+title: "Get started with aitrail"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Get started with aitrail}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+```
+
+aitrail keeps a record of how AI tools are used in a research project, phase by phase, while the work happens. From that record it audits gaps in human oversight, checks references, and writes the disclosure statement that journals, funders and universities increasingly ask for.
+
+The package does not call any AI model and does not try to detect AI-generated text.
+
+```{r setup}
+library(aitrail)
+```
+
+## 1. Start a log
+
+The log is a folder, `ai-log/`, at the root of the project. Each record is a small JSON file, so it can be versioned with git alongside the code, data and manuscript.
+
+```{r init}
+project <- file.path(tempdir(), "open-data-survey")
+ait_init(project, title = "Attitudes to open data among early-career researchers")
+```
+
+Prompts often contain unpublished data or personal data, so by default only a fingerprint of each prompt is stored (`prompt_store = "hash"`). Storing prompts in full is a deliberate choice.
+
+## 2. Register tools and uses
+
+Register each tool once, with the model and version when known: model behaviour changes between versions, and the version is what makes a use reproducible.
+
+```{r tools}
+gpt <- ait_tool("ChatGPT", provider = "OpenAI", model = "GPT-4o",
+                version = "2024-08-06", access = "web", path = project)
+```
+
+Then record each use: the phase of the project, the task, why AI was used, and how much of its output was kept.
+
+```{r uses}
+screen <- ait_register_use(
+  phase = "literature_review",
+  task = "Summarise 60 abstracts for first-pass screening",
+  tool = gpt,
+  purpose = "Speed up title and abstract screening",
+  output_used = "partial",
+  person = "A. Researcher",
+  date = "2026-02-10",
+  path = project
+)
+```
+
+The phases come from a fixed vocabulary, with labels in English and Spanish:
+
+```{r phases}
+ait_vocabulary("phases")[, c("id", "en")]
+```
+
+## 3. Record interactions and verifications
+
+Interactions are optional and follow the privacy policy:
+
+```{r interaction}
+ait_log_interaction(screen,
+                    prompt = "Summarise each abstract in two sentences: ...",
+                    summary = "60 two-sentence summaries",
+                    path = project)
+```
+
+Verifications record human oversight: who checked the output, how, and what happened.
+
+```{r verify}
+ait_verify(screen, method = "source_check", outcome = "modified",
+           verifier = "A. Researcher",
+           notes = "7 of 60 summaries corrected against the abstracts",
+           path = project)
+```
+
+## 4. Audit the log
+
+The rest of this vignette uses the example project included in the package, a fictitious study in which some uses were deliberately left unverified.
+
+```{r example}
+project <- ait_example()
+ait_log(project)
+```
+
+`ait_audit()` applies documented rules and lists each finding. It does not compute a score.
+
+```{r audit}
+ait_audit(project)
+```
+
+```{r rules}
+ait_audit_rules()
+```
+
+## 5. Check references
+
+Language models can invent references or attach a real DOI to the wrong paper. `ait_check_references()` looks each one up in Crossref and DataCite and compares the title, year and first author. It accepts DOIs, citation strings, a BibTeX file or a data frame. With `path`, the check is saved in the log and rule R04 is satisfied.
+
+```{r references, eval = FALSE}
+ait_check_references("references.bib", path = project, mailto = "you@university.edu")
+```
+
+A reference that is `not_found` is not proof of invention: some DOIs are registered with agencies other than Crossref and DataCite. Flagged references are for a person to check.
+
+## 6. Disclose
+
+The disclosure is generated from the log, in English or Spanish. Review it and adapt it to the policy of the journal or funder.
+
+```{r disclosure}
+ait_disclosure(project)
+ait_disclosure(project, lang = "es")
+```
+
+`style = "full"` gives an appendix with every tool and use, and `style = "json"` a machine-readable summary.
+
+## 7. Report
+
+`ait_report()` writes a self-contained HTML report with the statement, tools, uses, verifications, reference checks and audit findings, for supervisors, co-authors, ethics committees or editors.
+
+```{r report, eval = FALSE}
+ait_report(project, "ai-use-report.html")
+```

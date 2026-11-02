@@ -1,0 +1,12 @@
+{
+  "id": "tool-dcd3ac62a7",
+  "record": "tool",
+  "name": "ChatGPT",
+  "provider": "OpenAI",
+  "model": "GPT-4o",
+  "version": "2024-08-06",
+  "access": "web",
+  "data_retention": "Team plan; conversations not used for training",
+  "notes": null,
+  "created": "2026-06-15T09:00:00Z"
+}

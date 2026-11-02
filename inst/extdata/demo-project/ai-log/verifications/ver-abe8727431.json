@@ -1,0 +1,11 @@
+{
+  "id": "ver-abe8727431",
+  "record": "verification",
+  "use": "use-a6e51f5054",
+  "method": "source_check",
+  "outcome": "modified",
+  "verifier": "A. Researcher",
+  "notes": "Checked all 60 against the abstracts; 7 summaries corrected",
+  "date": "2026-02-11",
+  "created": "2026-06-15T09:00:00Z"
+}

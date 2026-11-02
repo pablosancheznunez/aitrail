@@ -1,0 +1,17 @@
+{
+  "id": "use-90e63a862d",
+  "record": "use",
+  "phase": "analysis",
+  "task": "Draft R code for the ordinal regression models",
+  "tool": "tool-f7ce89b3f1",
+  "purpose": "Write analysis code faster",
+  "output_used": "substantial",
+  "person": "A. Researcher",
+  "date": "2026-04-03",
+  "files": [
+    "analysis/02-models.R"
+  ],
+  "risks": [],
+  "notes": null,
+  "created": "2026-06-15T09:00:00Z"
+}

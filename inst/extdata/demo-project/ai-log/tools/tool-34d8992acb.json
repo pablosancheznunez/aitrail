@@ -1,0 +1,12 @@
+{
+  "id": "tool-34d8992acb",
+  "record": "tool",
+  "name": "DeepL",
+  "provider": "DeepL SE",
+  "model": null,
+  "version": null,
+  "access": "integrated",
+  "data_retention": null,
+  "notes": null,
+  "created": "2026-06-15T09:00:00Z"
+}

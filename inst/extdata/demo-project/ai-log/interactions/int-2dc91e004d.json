@@ -1,0 +1,14 @@
+{
+  "id": "int-2dc91e004d",
+  "record": "interaction",
+  "use": "use-a6e51f5054",
+  "timestamp": "2026-02-10T10:15:00Z",
+  "store": "hash",
+  "prompt": null,
+  "prompt_md5": "22e874b94adae96293b8c7aaeabb6989",
+  "response": null,
+  "response_md5": null,
+  "summary": "60 two-sentence summaries",
+  "parameters": null,
+  "created": "2026-06-15T09:00:00Z"
+}

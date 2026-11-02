@@ -1,0 +1,17 @@
+{
+  "id": "use-a6e51f5054",
+  "record": "use",
+  "phase": "literature_review",
+  "task": "Summarise 60 abstracts for first-pass screening",
+  "tool": "tool-dcd3ac62a7",
+  "purpose": "Speed up title and abstract screening",
+  "output_used": "partial",
+  "person": "A. Researcher",
+  "date": "2026-02-10",
+  "files": [],
+  "risks": [
+    "summaries may omit exclusion criteria"
+  ],
+  "notes": null,
+  "created": "2026-06-15T09:00:00Z"
+}

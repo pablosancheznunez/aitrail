@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use aitrail, please cite it as below."
+type: software
+title: "aitrail: Document, Verify and Disclose the Use of AI in Research"
+version: 0.1.0
+date-released: 2026-11-02
+authors:
+  - family-names: "Sánchez-Núñez"
+    given-names: "Pablo"
+    orcid: "https://orcid.org/0000-0001-7845-9506"
+url: "https://pablosancheznunez.com/aitrail/"
+repository-code: "https://github.com/pablosancheznunez/aitrail"
+license: MIT
+keywords:
+  - artificial intelligence
+  - research integrity
+  - transparency
+  - provenance
+  - AI disclosure
+  - open science
+  - R
+abstract: >-
+  An R package that keeps a structured, version-controlled record of how AI
+  tools are used in each phase of a research project, audits gaps in human
+  oversight, checks references against Crossref and DataCite, and generates
+  AI-use disclosure statements in English and Spanish.

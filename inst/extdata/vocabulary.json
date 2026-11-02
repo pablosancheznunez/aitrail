@@ -1,0 +1,64 @@
+{
+  "version": "0.1.0",
+  "phases": [
+    {"id": "literature_review", "en": "Literature review", "es": "Revisión bibliográfica",
+     "description": "Searching, screening, summarising or synthesising prior work."},
+    {"id": "conceptualisation", "en": "Conceptualisation", "es": "Conceptualización",
+     "description": "Formulating research questions, hypotheses or theoretical framing."},
+    {"id": "study_design", "en": "Study design", "es": "Diseño del estudio",
+     "description": "Designing methods, instruments, samples or protocols."},
+    {"id": "data_collection", "en": "Data collection", "es": "Recogida de datos",
+     "description": "Collecting, generating, transcribing or annotating data."},
+    {"id": "data_processing", "en": "Data processing", "es": "Tratamiento de datos",
+     "description": "Cleaning, coding, classifying or transforming data."},
+    {"id": "analysis", "en": "Analysis and code", "es": "Análisis y código",
+     "description": "Statistical or qualitative analysis, and writing or debugging analysis code."},
+    {"id": "interpretation", "en": "Interpretation", "es": "Interpretación",
+     "description": "Interpreting results and drawing conclusions."},
+    {"id": "writing", "en": "Writing", "es": "Redacción",
+     "description": "Drafting or substantially rewriting text."},
+    {"id": "translation_editing", "en": "Translation and editing", "es": "Traducción y edición",
+     "description": "Translating, proofreading or improving language without changing content."},
+    {"id": "figures", "en": "Figures and visualisation", "es": "Figuras y visualización",
+     "description": "Creating or modifying figures, images or visualisations."},
+    {"id": "peer_review", "en": "Peer review", "es": "Revisión por pares",
+     "description": "Reviewing other people's manuscripts or proposals."},
+    {"id": "communication", "en": "Communication", "es": "Comunicación",
+     "description": "Abstracts, summaries, slides, press or social media about the work."}
+  ],
+  "output_used": [
+    {"id": "none", "en": "Not used", "es": "No utilizado",
+     "description": "The output was discarded or only consulted."},
+    {"id": "partial", "en": "Partially used", "es": "Utilizado en parte",
+     "description": "Parts of the output were kept after substantial human revision."},
+    {"id": "substantial", "en": "Substantially used", "es": "Utilizado de forma sustancial",
+     "description": "Most of the output was kept, possibly with light editing."}
+  ],
+  "methods": [
+    {"id": "source_check", "en": "checked against sources", "es": "contraste con las fuentes",
+     "description": "Claims or summaries compared with the original sources."},
+    {"id": "rerun_analysis", "en": "analysis rerun", "es": "repetición del análisis",
+     "description": "Code or analysis rerun or reproduced independently."},
+    {"id": "expert_review", "en": "expert review", "es": "revisión experta",
+     "description": "Reviewed by a person with expertise in the topic."},
+    {"id": "reference_check", "en": "reference check", "es": "comprobación de referencias",
+     "description": "References checked for existence and metadata."},
+    {"id": "other", "en": "other checks", "es": "otras comprobaciones",
+     "description": "Any other verification, described in the notes."}
+  ],
+  "outcomes": [
+    {"id": "accepted", "en": "accepted", "es": "aceptado",
+     "description": "The output was correct as checked."},
+    {"id": "modified", "en": "modified", "es": "modificado",
+     "description": "Errors or problems were found and corrected."},
+    {"id": "rejected", "en": "rejected", "es": "rechazado",
+     "description": "The output was not usable and was discarded."}
+  ],
+  "access": [
+    {"id": "web", "en": "Web interface", "es": "Interfaz web", "description": "A chat or web application."},
+    {"id": "api", "en": "API", "es": "API", "description": "Programmatic access through an API."},
+    {"id": "local", "en": "Local model", "es": "Modelo local", "description": "A model run on the researcher's own hardware."},
+    {"id": "integrated", "en": "Integrated in software", "es": "Integrada en software",
+     "description": "An AI feature inside another tool (editor, reference manager, IDE)."}
+  ]
+}

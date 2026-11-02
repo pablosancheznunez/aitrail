@@ -1,0 +1,17 @@
+{
+  "id": "use-4da0682881",
+  "record": "use",
+  "phase": "writing",
+  "task": "Improve the clarity of the discussion section",
+  "tool": "tool-dcd3ac62a7",
+  "purpose": "Language and structure suggestions",
+  "output_used": "partial",
+  "person": "A. Researcher",
+  "date": "2026-05-20",
+  "files": [
+    "manuscript/discussion.qmd"
+  ],
+  "risks": [],
+  "notes": null,
+  "created": "2026-06-15T09:00:00Z"
+}

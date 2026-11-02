@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 278" width="240" height="278" role="img" aria-label="aitrail logo">
+  <polygon points="120,4 236,71 236,207 120,274 4,207 4,71" fill="#1f5f5b" stroke="#164744" stroke-width="6"/>
+  <rect x="48" y="62" width="112" height="150" rx="10" fill="#ffffff"/>
+  <rect x="66" y="86" width="60" height="10" rx="4" fill="#1f5f5b"/>
+  <rect x="66" y="112" width="76" height="8" rx="3" fill="#b9d3d0"/>
+  <rect x="66" y="132" width="66" height="8" rx="3" fill="#b9d3d0"/>
+  <rect x="66" y="152" width="72" height="8" rx="3" fill="#b9d3d0"/>
+  <circle cx="176" cy="96" r="30" fill="#f2b84b"/>
+  <path d="M162 96 l10 10 l19 -21" fill="none" stroke="#1f5f5b" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
