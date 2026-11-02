@@ -5,13 +5,14 @@
 \title{Start an AI-use log in a project}
 \usage{
 ait_init(
-  path = ".",
+  path,
   title = NULL,
   prompt_store = c("hash", "excerpt", "full", "none")
 )
 }
 \arguments{
-\item{path}{Root folder of the project.}
+\item{path}{Root folder of the project. There is no default, so the log
+is only created where it is asked for.}
 
 \item{title}{Title of the project, used in disclosures and reports.}
 

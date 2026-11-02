@@ -6,7 +6,8 @@
 #' supervisors, co-authors, ethics committees or journal editors.
 #'
 #' @param path Root folder of the project, or an `ait_log` object.
-#' @param file Output HTML file.
+#' @param file Output HTML file. There is no default, so nothing is written
+#'   unless a destination is given.
 #' @param lang Language: `"en"` or `"es"`.
 #'
 #' @return The path of the report, invisibly.
@@ -15,7 +16,7 @@
 #' @examples
 #' out <- file.path(tempdir(), "ai-use-report.html")
 #' ait_report(ait_example(), out)
-ait_report <- function(path = ".", file = "ai-use-report.html", lang = c("en", "es")) {
+ait_report <- function(path = ".", file, lang = c("en", "es")) {
   lang <- match.arg(lang)
   s <- strings(lang)
   log <- if (inherits(path, "ait_log")) path else ait_log(path)

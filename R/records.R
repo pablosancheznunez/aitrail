@@ -4,7 +4,8 @@
 #' JSON files, one per record, meant to be kept under version control with
 #' the project's code and data.
 #'
-#' @param path Root folder of the project.
+#' @param path Root folder of the project. There is no default, so the log
+#'   is only created where it is asked for.
 #' @param title Title of the project, used in disclosures and reports.
 #' @param prompt_store Default way of storing prompts and responses:
 #'   `"hash"` (only a fingerprint, the default), `"excerpt"` (the first 200
@@ -17,7 +18,7 @@
 #' @examples
 #' project <- file.path(tempdir(), "my-study")
 #' ait_init(project, title = "Attitudes to open data")
-ait_init <- function(path = ".", title = NULL,
+ait_init <- function(path, title = NULL,
                      prompt_store = c("hash", "excerpt", "full", "none")) {
   prompt_store <- match.arg(prompt_store)
   check_string(title, "title", null_ok = TRUE)

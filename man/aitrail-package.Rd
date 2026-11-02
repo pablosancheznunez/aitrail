@@ -8,7 +8,7 @@
 \description{
 \if{html}{\figure{logo.svg}{options: style='float: right' alt='logo' width='120'}}
 
-Keeps a structured, version-controlled record of how artificial intelligence tools are used in each phase of a research project (literature review, design, data collection and processing, analysis, interpretation, writing, figures, peer review and communication): which tools and model versions were used, for what, how much of their output was kept, and how people verified it. From that record it audits gaps in human oversight, checks that cited references exist and match their metadata, and generates AI-use disclosure statements in English and Spanish and a self-contained HTML report. Prompts are stored as hashes by default to protect unpublished and personal data. The package does not call any AI model and does not try to detect AI-generated text.
+Keeps a structured, version-controlled record of how artificial intelligence tools are used in each phase of a research project (literature review, design, data collection and processing, analysis, interpretation, writing, figures, peer review and communication): which tools and model versions were used, for what, how much of their output was kept, and how people verified it. From that record it audits gaps in human oversight, checks that cited references exist and match their metadata in 'Crossref' \url{https://www.crossref.org/} and 'DataCite' \url{https://datacite.org/}, and generates AI-use disclosure statements in English and Spanish and a self-contained HTML report. Prompts are stored as hashes by default to protect unpublished and personal data. The package does not call any AI model and does not try to detect AI-generated text.
 }
 \seealso{
 Useful links:

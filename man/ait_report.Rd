@@ -4,12 +4,13 @@
 \alias{ait_report}
 \title{Write a self-contained HTML report of AI use}
 \usage{
-ait_report(path = ".", file = "ai-use-report.html", lang = c("en", "es"))
+ait_report(path = ".", file, lang = c("en", "es"))
 }
 \arguments{
 \item{path}{Root folder of the project, or an \code{ait_log} object.}
 
-\item{file}{Output HTML file.}
+\item{file}{Output HTML file. There is no default, so nothing is written
+unless a destination is given.}
 
 \item{lang}{Language: \code{"en"} or \code{"es"}.}
 }

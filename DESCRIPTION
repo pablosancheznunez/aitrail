@@ -11,7 +11,8 @@ Description: Keeps a structured, version-controlled record of how artificial
     tools and model versions were used, for what, how much of their output
     was kept, and how people verified it. From that record it audits gaps in
     human oversight, checks that cited references exist and match their
-    metadata, and generates AI-use disclosure statements in English and
+    metadata in 'Crossref' <https://www.crossref.org/> and 'DataCite'
+    <https://datacite.org/>, and generates AI-use disclosure statements in English and
     Spanish and a self-contained HTML report. Prompts are stored as hashes by
     default to protect unpublished and personal data. The package does not
     call any AI model and does not try to detect AI-generated text.
